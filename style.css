@@ -1,0 +1,12 @@
+body{
+    background-color: #e8ece7;}
+
+.container{
+    display:inline-block;
+    margin: 15px;
+    height: 200px;
+    width: 400px;
+    background-color: white;
+    border-radius: 40px;
+    padding: 10px;
+}

@@ -1,9 +1,11 @@
 body{
-    background-color: #e8ece7;}
+    background-color: #e8ece7;
+    text-align: center;
+}
 
 .container{
     display:inline-block;
-    margin: 10px;
+    margin: 0px 0px 0px 100px;
     height: 200px;
     width: 400px;
     background-color: white;
@@ -19,10 +21,12 @@ body{
     height: 200px;
     border-radius:20px;
     padding-right: 30px;
-    margin: 20px;
+    margin: 0px 0px 0px 620px;
     float: left;
+   
 
 }
 .content {
     width: 700px;
+    margin: 0px 0px 0px 620px;
 }

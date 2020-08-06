@@ -9,6 +9,7 @@ body{
     background-color: white;
     border-radius: 40px;
     padding: 10px;
+    float: center;
 }
 
 .img{
@@ -17,6 +18,11 @@ body{
     width: 200px;
     height: 200px;
     border-radius:20px;
-    padding: 30px;
+    padding-right: 30px;
     margin: 20px;
+    float: left;
+
+}
+.content {
+    width: 700px;
 }

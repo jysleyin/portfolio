@@ -1,4 +1,5 @@
 import photo from './assets/photo.png'
+import logo from './assets/logo.png'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -8,10 +9,21 @@ export default function App() {
   return (
     <div className="min-h-screen" style={{backgroundColor: '#F5F1E8'}}>
       {/* Navigation */}
-      <nav className="flex justify-center gap-8 py-6">
-        <a href="#work" className="text-gray-700 hover:text-gray-900">Work</a>
-        <a href="#about" className="text-gray-700 hover:text-gray-900">About</a>
-        <a href="#contact" className="text-gray-700 hover:text-gray-900">Contact</a>
+      <nav className="sticky top-0 z-50 flex justify-center px-8 py-6">
+        <div className="flex items-center justify-between w-full max-w-2xl px-6 py-3" style={{
+          backgroundColor: '#FFFBF2',
+          backdropFilter: 'blur(10px)',
+          borderRadius: '50px',
+          border: '1px solid rgba(255, 255, 255, 0.3)',
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)'
+        }}>
+          <img src={logo} alt="Logo" className="h-8" />
+          <div className="flex gap-8">
+            <a href="#work" className="text-gray-400 hover:text-black transition">Work</a>
+            <a href="#about" className="text-gray-400 hover:text-black transition">About</a>
+            <a href="#contact" className="text-gray-400 hover:text-black transition">Contact</a>
+          </div>
+        </div>
       </nav>
 
       {/* Hero Section */}

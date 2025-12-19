@@ -6,7 +6,7 @@ export default function App() {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
-    <div className="min-h-screen bg-stone-100">
+    <div className="min-h-screen" style={{backgroundColor: '#F5F1E8'}}>
       {/* Navigation */}
       <nav className="flex justify-center gap-8 py-6">
         <a href="#work" className="text-gray-700 hover:text-gray-900">Work</a>
@@ -55,9 +55,9 @@ export default function App() {
       </section>
 
       {/* Wavy divider */}
-      <div className="relative h-20" style={{backgroundColor: '#e0eb73'}}>
+      <div className="relative h-20" style={{backgroundColor: '#F5F1E8'}}>
         <svg className="absolute top-0 w-full h-20" viewBox="0 0 1440 100" preserveAspectRatio="none">
-          <path d="M0,50 Q360,0 720,50 T1440,50 L1440,100 L0,100 Z" fill="#fafaf9" />
+          <path d="M0,20 Q60,0 120,20 T240,20 T360,20 T480,20 T600,20 T720,20 T840,20 T960,20 T1080,20 T1200,20 T1320,20 T1440,20 L1440,100 L0,100 Z" fill="#e0eb73" />
         </svg>
       </div>
 
@@ -87,14 +87,14 @@ export default function App() {
       </section>
 
       {/* Wavy divider */}
-      <div className="relative h-20 bg-purple-300">
+      <div className="relative h-20" style={{backgroundColor: '#e0eb73'}}>
         <svg className="absolute top-0 w-full h-20" viewBox="0 0 1440 100" preserveAspectRatio="none">
-          <path d="M0,50 Q360,0 720,50 T1440,50 L1440,100 L0,100 Z" fill="#e0eb73" />
+          <path d="M0,20 Q60,0 120,20 T240,20 T360,20 T480,20 T600,20 T720,20 T840,20 T960,20 T1080,20 T1200,20 T1320,20 T1440,20 L1440,100 L0,100 Z" fill="#F7C5FC" />
         </svg>
       </div>
 
       {/* Footer Section */}
-      <section className="bg-purple-300 py-20 px-8 text-center">
+      <section className="py-20 px-8 text-center" style={{backgroundColor: '#F7C5FC'}}>
         <h2 className="text-4xl font-bold mb-4">Thanks for scrolling<br />12345 pixels!</h2>
         <p className="text-lg mb-8">If you are still here, let's get in touch?</p>
         <div className="flex justify-center gap-4 mb-12">

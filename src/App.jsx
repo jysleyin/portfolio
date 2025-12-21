@@ -1,5 +1,6 @@
 import photo from './assets/photo.png'
 import logo from './assets/logo.png'
+import enchantedwhispers from './assets/enchantedwhispers.png'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useState, useRef } from 'react'
 
@@ -83,9 +84,9 @@ export default function App() {
         <h2 className="text-4xl font-bold text-center mb-16">Featured Works</h2>
         <div className="max-w-5xl mx-auto pb-40 space-y-4">
           {[
-            { title: 'BenefitBridge', date: 'Summer 2025', desc: 'Connect yourself with the best benefits suitable for your needs. Designed to eliminate confusion and help people feel supported, BenefitBridge analyzes personal priorities and matches users with benefit plans that align with their health and lifestyle.', color: '#0CA065' },
-            { title: 'Enchanted Whispers', date: 'Spring 2024', desc: 'A personality-based career quiz enhanced with a mythical visual identity and interactive storytelling to inspire users to explore and reflect on their career interests.', color: '#000000' },
-            { title: 'Forever Health', date: 'Spring 2024', desc: 'A case study exploring a platform solution that improves patient data accessibility for healthcare institutions, emphasizing workflow efficiency and user-centric data visualization.', color: '#EA6640' }
+            { title: 'BenefitBridge', date: 'Summer 2025', desc: 'Connect yourself with the best benefits suitable for your needs. Designed to eliminate confusion and help people feel supported, BenefitBridge analyzes personal priorities and matches users with benefit plans that align with their health and lifestyle.', color: '#0CA065', image: null },
+            { title: 'Enchanted Whispers', date: 'Spring 2024', desc: 'A personality-based career quiz enhanced with a mythical visual identity and interactive storytelling to inspire users to explore and reflect on their career interests.', color: '#000000', image: enchantedwhispers },
+            { title: 'Forever Health', date: 'Spring 2024', desc: 'A case study exploring a platform solution that improves patient data accessibility for healthcare institutions, emphasizing workflow efficiency and user-centric data visualization.', color: '#EA6640', image: null }
           ].map((project, i) => {
             const topOffset = useTransform(
               scrollYProgress,
@@ -115,7 +116,7 @@ export default function App() {
               >
                 <div className="p-10 flex flex-col md:flex-row gap-8 relative min-h-[375px]" style={{backgroundColor: project.color, borderRadius: '30px'}}>
                   <img 
-                    src="https://via.placeholder.com/200x150" 
+                    src={project.image || "https://via.placeholder.com/200x150"} 
                     alt={project.title}
                     className="w-64 h-48 object-cover"
                     style={{borderRadius: '20px'}}

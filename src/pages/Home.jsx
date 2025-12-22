@@ -55,7 +55,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto pl-40 pr-16 py-16">
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
           <div className="flex-1">
-            <h2 className="text-3xl mb-2">Hello! I am</h2>
+            <h2 className="text-3xl font-bold mb-2">Hello! I am</h2>
             <h1 className="text-7xl font-bold mb-6" style={{ minHeight: '5rem' }}>
               {displayText}
               {showCursor && <span className="typing-cursor">|</span>}
@@ -192,7 +192,8 @@ export default function Home() {
                   />
                     <div className="flex-1 flex flex-col">
                       <h3 className="text-white text-3xl font-bold mb-3">{project.title}</h3>
-                      <p className="text-white text-lg mb-6"><em>({project.date})</em> {project.desc}</p>
+                      <p className="text-white text-lg mb-2"><em>({project.date})</em> {project.desc}</p>
+                      <p className="text-white text-sm mb-4">⏱ 5 min read</p>
                       <div className="flex-1"></div>
                       <div className="flex justify-end">
                         <motion.button

@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className="flex gap-8">
           <a href="/#work" className="text-gray-400 hover:text-black transition">Work</a>
           <Link to="/about" className="text-gray-400 hover:text-black transition">About</Link>
-          <a href="#contact" className="text-gray-400 hover:text-black transition">Contact</a>
+          <Link to="/contact" className="text-gray-400 hover:text-black transition">Contact</Link>
         </div>
       </div>
     </nav>

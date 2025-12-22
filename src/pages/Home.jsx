@@ -1,24 +1,64 @@
 import photo from '../assets/photo.png'
 import enchantedwhispers from '../assets/enchantedwhispers.png'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
+  const [displayText, setDisplayText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+  const [hasTyped, setHasTyped] = useState(false);
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
+
+  useEffect(() => {
+    if (hasTyped) return;
+    
+    const fullText = 'JULZ.';
+    let currentIndex = 0;
+    
+    const timer = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setDisplayText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(timer);
+        setHasTyped(true);
+        // Keep cursor blinking for 2 more seconds after typing finishes
+        setTimeout(() => {
+          setShowCursor(false);
+        }, 2000);
+      }
+    }, 250);
+    
+    return () => clearInterval(timer);
+  }, [hasTyped]);
   
   return (
     <>
+      <style>
+        {`
+          @keyframes blink {
+            0%, 50% { opacity: 0.7; }
+            51%, 100% { opacity: 0; }
+          }
+          .typing-cursor {
+            animation: blink 0.5s infinite;
+          }
+        `}
+      </style>
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto pl-40 pr-16 py-16">
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
           <div className="flex-1">
             <h2 className="text-3xl mb-2">Hello! I am</h2>
-            <h1 className="text-7xl font-bold mb-6">JULZ.</h1>
+            <h1 className="text-7xl font-bold mb-6" style={{ minHeight: '5rem' }}>
+              {displayText}
+              {showCursor && <span className="typing-cursor">|</span>}
+            </h1>
             <p className="text-gray-700 text-xl mb-8 max-w-md">
               A student, creative builder, and community leader obsessed with turning ideas into impact.
             </p>

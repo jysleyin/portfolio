@@ -128,11 +128,13 @@ export default function Home() {
                 🎮
               </motion.div>
               
-              <img 
+              <motion.img 
                 src={photo} 
                 alt="Profile" 
                 className="rounded-lg w-full max-w-sm relative"
                 style={{ zIndex: 1 }}
+                animate={{ scale: isPhotoHovered ? 1.05 : 1 }}
+                transition={{ duration: 0.3 }}
               />
             </div>
           </div>

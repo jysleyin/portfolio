@@ -4,7 +4,7 @@ import enchantedwhispers from './assets/enchantedwhispers.png'
 export default function About() {
   return (
     <>
-      <section className="px-8 py-16" style={{background: 'linear-gradient(to bottom, #F5F1E8, #E0EB73)', minHeight: '100vh'}}>
+      <section className="px-8 py-16" style={{backgroundColor: '#F5F1E8', minHeight: '100vh'}}>
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <h1 className="text-5xl font-bold mb-8">Little bit about the person behind the screen</h1>
@@ -15,7 +15,7 @@ export default function About() {
           </div>
 
           {/* Main Content - Two Column Layout */}
-          <div className="grid md:grid-cols-2 gap-12 mb-20">
+          <div className="grid md:grid-cols-2 gap-12 mb-8">
             {/* Left Column - Text */}
             <div>
               <h2 className="text-4xl font-bold mb-6">I'm Julz</h2>
@@ -48,9 +48,9 @@ export default function About() {
             <div className="relative">
               {/* Gradient Overlays */}
               <div className="absolute left-0 top-0 bottom-0 w-64 z-10 pointer-events-none" 
-                style={{background: 'linear-gradient(to right, #E0EB73 0%, #E0EB73 20%, transparent 100%)'}}></div>
+                style={{background: 'linear-gradient(to right, #F5F1E8 0%, #F5F1E8 20%, transparent 100%)'}}></div>
               <div className="absolute right-0 top-0 bottom-0 w-64 z-10 pointer-events-none" 
-                style={{background: 'linear-gradient(to left, #E0EB73 0%, #E0EB73 20%, transparent 100%)'}}></div>
+                style={{background: 'linear-gradient(to left, #F5F1E8 0%, #F5F1E8 20%, transparent 100%)'}}></div>
               
               {/* Scrolling Container */}
               <div className="overflow-hidden">
@@ -98,11 +98,14 @@ export default function About() {
             </div>
           </div>
 
+          {/* My Experience Section */}
+          <h2 className="text-4xl font-bold mb-8">My Experience</h2>
+          
           {/* Bottom Three Columns */}
           <div className="grid md:grid-cols-3 gap-12 text-sm">
             {/* Extracurriculars */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">Extracurriculars</h3>
+              <h3 className="text-lg mb-4">Extracurriculars</h3>
               <ul className="space-y-2">
                 <li><em>(2025 - Present)</em> Public Relations, NYU Girls Proud to be First</li>
                 <li><em>(2024 - Present)</em> Resident Assistant, NYU Residence Life</li>
@@ -117,7 +120,7 @@ export default function About() {
 
             {/* Awards & Certifications */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">Awards & Certifications</h3>
+              <h3 className="text-lg mb-4">Awards & Certifications</h3>
               <ul className="space-y-2">
                 <li>Microsoft Certified: Azure Fundamentals</li>
                 <li>AutoCAD Certified</li>
@@ -132,13 +135,13 @@ export default function About() {
 
             {/* Skills */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">Skills</h3>
+              <h3 className="text-lg mb-4">Skills</h3>
               <div className="mb-4">
-                <p className="font-semibold mb-2">UI/UX DESIGN</p>
+                <p className="font-bold mb-2">UI/UX DESIGN</p>
                 <p>Figma, Canva, Adobe Creative Cloud</p>
               </div>
               <div>
-                <p className="font-semibold mb-2">PROJECT MANAGEMENT</p>
+                <p className="font-bold mb-2">PROJECT MANAGEMENT</p>
                 <p>Jira, Confluence, Notion, Google Suite, Visio, Figma, Hubspot, Excel</p>
               </div>
             </div>

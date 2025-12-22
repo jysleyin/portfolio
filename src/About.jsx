@@ -33,7 +33,7 @@ export default function About() {
             </div>
 
             {/* Right Column - Photo */}
-            <div className="flex justify-center items-start">
+            <div className="flex justify-center items-center -mt-28">
               <img 
                 src={aboutme} 
                 alt="Julz with cat" 

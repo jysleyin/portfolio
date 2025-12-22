@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from 'react'
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isPhotoHovered, setIsPhotoHovered] = useState(false);
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
   const [hasTyped, setHasTyped] = useState(false);
@@ -83,12 +84,57 @@ export default function Home() {
               </motion.span>
             </motion.a>
           </div>
-          <div className="flex-1">
-            <img 
-              src={photo} 
-              alt="Profile" 
-              className="rounded-lg w-full max-w-sm"
-            />
+          <div className="flex-1 flex justify-center">
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsPhotoHovered(true)}
+              onMouseLeave={() => setIsPhotoHovered(false)}
+            >
+              {/* Decorative elements that emerge from behind */}
+              <motion.div
+                className="absolute -top-4 -left-4 text-4xl"
+                style={{ zIndex: 0 }}
+                initial={{ scale: 0, rotate: 0 }}
+                animate={isPhotoHovered ? { scale: 1, rotate: 15 } : { scale: 0, rotate: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                ⭐
+              </motion.div>
+              <motion.div
+                className="absolute -top-6 -right-6 text-3xl"
+                style={{ zIndex: 0 }}
+                initial={{ scale: 0, rotate: 0 }}
+                animate={isPhotoHovered ? { scale: 1, rotate: -20 } : { scale: 0, rotate: 0 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+              >
+                🌈
+              </motion.div>
+              <motion.div
+                className="absolute -bottom-4 -right-4 text-4xl"
+                style={{ zIndex: 0 }}
+                initial={{ scale: 0, rotate: 0 }}
+                animate={isPhotoHovered ? { scale: 1, rotate: 10 } : { scale: 0, rotate: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+              >
+                🧋
+              </motion.div>
+              <motion.div
+                className="absolute -bottom-6 -left-6 text-3xl"
+                style={{ zIndex: 0 }}
+                initial={{ scale: 0, rotate: 0 }}
+                animate={isPhotoHovered ? { scale: 1, rotate: -15 } : { scale: 0, rotate: 0 }}
+                transition={{ duration: 0.3, delay: 0.15 }}
+              >
+                🎮
+              </motion.div>
+              
+              <img 
+                src={photo} 
+                alt="Profile" 
+                className="rounded-lg w-full max-w-sm relative"
+                style={{ zIndex: 1 }}
+              />
+            </div>
           </div>
         </div>
       </section>

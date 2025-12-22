@@ -2,8 +2,21 @@
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 body {
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+#root {
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }

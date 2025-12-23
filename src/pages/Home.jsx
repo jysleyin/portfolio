@@ -149,7 +149,7 @@ export default function Home() {
       </div>
 
       {/* Featured Works Section */}
-      <section id="work" ref={containerRef} className="py-20 px-8" style={{backgroundColor: '#e0eb73'}}>
+      <section id="work" ref={containerRef} className="py-8 px-8" style={{backgroundColor: '#e0eb73'}}>
         <h2 className="text-4xl font-bold text-center mb-16">Featured Works</h2>
         <div className="max-w-5xl mx-auto pb-40 space-y-4">
           {[
@@ -164,6 +164,7 @@ export default function Home() {
                 className="w-full"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.6, delay: i * 0.2, ease: "easeOut" }}
                 viewport={{ once: true, margin: "-100px" }}
               >
@@ -181,7 +182,7 @@ export default function Home() {
                     <div className="flex-1"></div>
                     <div className="flex justify-end">
                       <motion.button
-                        className="inline-block px-8 py-3 text-lg rounded-full"
+                        className="inline-block px-8 py-3 text-lg rounded-full cursor-pointer"
                         style={{backgroundColor: '#F5F1E8', color: 'black'}}
                         onHoverStart={() => setIsProjectHovered(true)}
                         onHoverEnd={() => setIsProjectHovered(false)}

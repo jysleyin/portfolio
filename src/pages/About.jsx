@@ -1,5 +1,5 @@
-import aboutme from './assets/about-me.png'
-import enchantedwhispers from './assets/enchantedwhispers.png'
+import aboutme from '../assets/about-me.png'
+import enchantedwhispers from '../assets/enchantedwhispers.png'
 
 export default function About() {
   return (
@@ -7,7 +7,7 @@ export default function About() {
       <section className="px-8 py-16" style={{backgroundColor: '#F5F1E8', minHeight: '100vh'}}>
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <h1 className="text-5xl font-bold mb-8">Little bit about the person behind the screen</h1>
+          <h1 className="text-5xl text-center font-bold mb-16">Little bit about the person behind the screen</h1>
           
           {/* Location Badge */}
           <div className="inline-block px-6 py-2 rounded-full mb-12 text-lg" style={{backgroundColor: '#F5F1E8', border: '0.75px solid #888888'}}>
@@ -33,7 +33,7 @@ export default function About() {
             </div>
 
             {/* Right Column - Photo */}
-            <div className="flex justify-center items-center -mt-28">
+            <div className="flex justify-end items-center -mt-28">
               <img 
                 src={aboutme} 
                 alt="Julz with cat" 

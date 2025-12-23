@@ -157,31 +157,15 @@ export default function Home() {
             { title: 'Enchanted Whispers', date: 'Spring 2024', desc: 'A personality-based career quiz enhanced with a mythical visual identity and interactive storytelling to inspire users to explore and reflect on their career interests.', color: '#000000', image: enchantedwhispers },
             { title: 'Forever Health', date: 'Spring 2024', desc: 'A case study exploring a platform solution that improves patient data accessibility for healthcare institutions, emphasizing workflow efficiency and user-centric data visualization.', color: '#EA6640', image: null }
           ].map((project, i) => {
-            const topOffset = useTransform(
-              scrollYProgress,
-              [0, 0.5],
-              [100 + i * 60, 100 + i * 45]
-            );
-            
-            const leftOffset = useTransform(
-              scrollYProgress,
-              [0, 0.5],
-              [i * 25, 0]
-            );
-            
             const [isProjectHovered, setIsProjectHovered] = useState(false);
-            
             return (
               <motion.div
                 key={i}
-                className="sticky w-full"
-                style={{ top: topOffset, left: leftOffset }}
-                initial={{ scale: 1, opacity: 1 }}
-                whileInView={{ 
-                  scale: 1,
-                }}
-                transition={{ duration: 0.3 }}
-                viewport={{ once: false, margin: "-100px" }}
+                className="w-full"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.2, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-100px" }}
               >
                 <div className="p-10 flex flex-col md:flex-row gap-8 relative min-h-[375px]" style={{backgroundColor: project.color, borderRadius: '30px'}}>
                   <img 
@@ -190,31 +174,31 @@ export default function Home() {
                     className="w-64 h-48 object-cover"
                     style={{borderRadius: '20px'}}
                   />
-                    <div className="flex-1 flex flex-col">
-                      <h3 className="text-white text-3xl font-bold mb-3">{project.title}</h3>
-                      <p className="text-white text-lg mb-2"><em>({project.date})</em> {project.desc}</p>
-                      <p className="text-white text-sm mb-4">⏱ 5 min read</p>
-                      <div className="flex-1"></div>
-                      <div className="flex justify-end">
-                        <motion.button
-                          className="inline-block px-8 py-3 text-lg rounded-full"
-                          style={{backgroundColor: '#F5F1E8', color: 'black'}}
-                          onHoverStart={() => setIsProjectHovered(true)}
-                          onHoverEnd={() => setIsProjectHovered(false)}
-                          animate={{ paddingRight: isProjectHovered ? '2.5rem' : '1rem' }}
+                  <div className="flex-1 flex flex-col">
+                    <h3 className="text-white text-3xl font-bold mb-3">{project.title}</h3>
+                    <p className="text-white text-lg mb-2"><em>({project.date})</em> {project.desc}</p>
+                    <p className="text-white text-sm mb-4">⏱ 5 min read</p>
+                    <div className="flex-1"></div>
+                    <div className="flex justify-end">
+                      <motion.button
+                        className="inline-block px-8 py-3 text-lg rounded-full"
+                        style={{backgroundColor: '#F5F1E8', color: 'black'}}
+                        onHoverStart={() => setIsProjectHovered(true)}
+                        onHoverEnd={() => setIsProjectHovered(false)}
+                        animate={{ paddingRight: isProjectHovered ? '2.5rem' : '1rem' }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        View more
+                        <motion.span
+                          className="ml-2"
+                          animate={{ opacity: isProjectHovered ? 1 : 0 }}
                           transition={{ duration: 0.2 }}
                         >
-                          View more
-                          <motion.span
-                            className="ml-2"
-                            animate={{ opacity: isProjectHovered ? 1 : 0 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            →
-                          </motion.span>
-                        </motion.button>
-                      </div>
+                          →
+                        </motion.span>
+                      </motion.button>
                     </div>
+                  </div>
                 </div>
               </motion.div>
             );

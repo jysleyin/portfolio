@@ -5,7 +5,8 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overscroll-behavior: none;
+  /* allow default overscroll behavior so vertical scrolling works normally */
+  overscroll-behavior: auto;
 }
 
 body {
@@ -13,10 +14,10 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overscroll-behavior: none;
+  overscroll-behavior: auto;
 }
 
 #root {
   overflow-x: hidden;
-  overscroll-behavior: none;
+  overscroll-behavior: auto;
 }

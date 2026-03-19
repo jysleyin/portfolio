@@ -69,28 +69,14 @@ export default function About() {
                   `}
                 </style>
                 
-                {/* Row 1 */}
-                <div className="flex gap-4 mb-4 animate-scroll">
-                  {[...Array(16)].map((_, i) => (
+                {/* Single Row */}
+                <div className="flex gap-4 animate-scroll">
+                  {[...Array(32)].map((_, i) => (
                     <img 
                       key={i}
                       src={enchantedwhispers}
                       alt="Side quest"
-                      className="w-48 h-48 object-cover rounded-2xl flex-shrink-0"
-                      style={{border: '4px solid white'}}
-                    />
-                  ))}
-                </div>
-                
-                {/* Row 2 */}
-                <div className="flex gap-4 animate-scroll" style={{animationDirection: 'reverse'}}>
-                  {[...Array(16)].map((_, i) => (
-                    <img 
-                      key={i}
-                      src={enchantedwhispers}
-                      alt="Side quest"
-                      className="w-48 h-48 object-cover rounded-2xl flex-shrink-0"
-                      style={{border: '4px solid white'}}
+                      className="w-80 h-96 object-cover rounded-2xl flex-shrink-0"
                     />
                   ))}
                 </div>

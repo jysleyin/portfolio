@@ -1,7 +1,9 @@
 import photo from '../assets/photo.png'
 import enchantedwhispers from '../assets/enchantedwhispers.png'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import projects from '../data/projects'
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
@@ -9,12 +11,13 @@ export default function Home() {
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
   const [hasTyped, setHasTyped] = useState(false);
+  const [hoveredProject, setHoveredProject] = useState(null);
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
-
+  const navigate = useNavigate()
   useEffect(() => {
     if (hasTyped) return;
     
@@ -152,12 +155,7 @@ export default function Home() {
       <section id="work" ref={containerRef} className="py-8 px-8" style={{backgroundColor: '#e0eb73'}}>
         <h2 className="text-4xl font-bold text-center mb-16">Featured Works</h2>
         <div className="max-w-5xl mx-auto pb-40 space-y-4">
-          {[
-            { title: 'BenefitBridge', date: 'Summer 2025', desc: 'Connect yourself with the best benefits suitable for your needs. Designed to eliminate confusion and help people feel supported, BenefitBridge analyzes personal priorities and matches users with benefit plans that align with their health and lifestyle.', color: '#0CA065', image: null },
-            { title: 'Enchanted Whispers', date: 'Spring 2024', desc: 'A personality-based career quiz enhanced with a mythical visual identity and interactive storytelling to inspire users to explore and reflect on their career interests.', color: '#000000', image: enchantedwhispers },
-            { title: 'Forever Health', date: 'Spring 2024', desc: 'A case study exploring a platform solution that improves patient data accessibility for healthcare institutions, emphasizing workflow efficiency and user-centric data visualization.', color: '#EA6640', image: null }
-          ].map((project, i) => {
-            const [isProjectHovered, setIsProjectHovered] = useState(false);
+          {projects.map((project, i) => {
             return (
               <motion.div
                 key={i}
@@ -184,15 +182,16 @@ export default function Home() {
                       <motion.button
                         className="inline-block px-8 py-3 text-lg rounded-full cursor-pointer"
                         style={{backgroundColor: '#F5F1E8', color: 'black'}}
-                        onHoverStart={() => setIsProjectHovered(true)}
-                        onHoverEnd={() => setIsProjectHovered(false)}
-                        animate={{ paddingRight: isProjectHovered ? '2.5rem' : '1rem' }}
+                        onHoverStart={() => setHoveredProject(i)}
+                        onHoverEnd={() => setHoveredProject(null)}
+                        animate={{ paddingRight: hoveredProject === i ? '1.5rem' : '0.25rem' }}
                         transition={{ duration: 0.2 }}
+                        onClick={() => navigate(`/projects/${project.slug}`)}
                       >
                         View more
                         <motion.span
                           className="ml-2"
-                          animate={{ opacity: isProjectHovered ? 1 : 0 }}
+                          animate={{ opacity: hoveredProject === i ? 1 : 0 }}
                           transition={{ duration: 0.2 }}
                         >
                           →

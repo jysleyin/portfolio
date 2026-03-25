@@ -14,10 +14,16 @@ export default function Navbar() {
         <Link to="/">
           <img src={logo} alt="Logo" className="h-8" />
         </Link>
-        <div className="flex gap-8">
+        <div className="flex items-center gap-8">
           <a href="/#work" className="text-gray-400 hover:text-black transition">Work</a>
           <Link to="/about" className="text-gray-400 hover:text-black transition">About</Link>
-          <Link to="/contact" className="text-gray-400 hover:text-black transition">Connect</Link>
+          <a
+            href="mailto:julissaliangg@gmail.com"
+            className="bg-black text-white px-5 py-2 rounded-full shadow hover:bg-gray-800 transition"
+            style={{ textDecoration: 'none' }}
+          >
+            Connect
+          </a>
         </div>
       </div>
     </nav>

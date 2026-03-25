@@ -1,5 +1,18 @@
 import aboutme from '../assets/about-me.png'
-import enchantedwhispers from '../assets/enchantedwhispers.png'
+
+// Import selected quest images for the carousel
+import quest2 from '../assets/quests/quest-2.jpg';
+import quest4 from '../assets/quests/quest-4.jpg';
+import quest6 from '../assets/quests/quest-6.png';
+import quest7 from '../assets/quests/quest-7.jpg';
+import quest10 from '../assets/quests/quest-10.jpg';
+import quest11 from '../assets/quests/quest-11.jpg';
+import quest12 from '../assets/quests/quest-12.jpg';
+import quest16 from '../assets/quests/quest-16.jpg';
+import quest18 from '../assets/quests/quest-18.jpg';
+import quest22 from '../assets/quests/quest-22.jpg';
+import quest30 from '../assets/quests/quest-30.jpg';
+import quest32 from '../assets/quests/quest-32.jpg';
 
 export default function About() {
   return (
@@ -58,25 +71,29 @@ export default function About() {
                   {`
                     @keyframes scroll {
                       0% { transform: translateX(0); }
-                      100% { transform: translateX(-50%); }
+                      100% { transform: translateX(-100%); }
                     }
                     .animate-scroll {
-                      animation: scroll 20s linear infinite;
+                      animation: scroll 120s linear infinite;
+                      display: flex;
+                      width: max-content;
                     }
                     .animate-scroll:hover {
                       animation-play-state: paused;
                     }
                   `}
                 </style>
-                
-                {/* Single Row */}
-                <div className="flex gap-4 animate-scroll">
-                  {[...Array(32)].map((_, i) => (
-                    <img 
+                {/* Single Row - Duplicated for seamless scroll */}
+                <div className="flex animate-scroll gap-4">
+                  {[
+                    quest2, quest4, quest6, quest7, quest10, quest11, quest12, quest16, quest18, quest22, quest30, quest32,
+                    quest2, quest4, quest6, quest7, quest10, quest11, quest12, quest16, quest18, quest22, quest30, quest32
+                  ].map((imgSrc, i) => (
+                    <img
                       key={i}
-                      src={enchantedwhispers}
-                      alt="Side quest"
-                      className="w-80 h-96 object-cover rounded-2xl flex-shrink-0"
+                      src={imgSrc}
+                      alt={`Side quest ${(i%12)+1}`}
+                      className="w-80 h-96 object-cover rounded-2xl shrink-0"
                     />
                   ))}
                 </div>

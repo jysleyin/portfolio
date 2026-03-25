@@ -1,7 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Project from './pages/Project'
+
+
 export default function App() {
   return (
-    <div className="bg-green-500 p-2 sm:p-10 md:p-20 lg:p-40">
-      <h1 className="text-white text-3xl">Resize the window</h1>
-    </div>
+    <Router>
+      <div className="min-h-screen scroll-smooth" style={{backgroundColor: '#F5F1E8'}}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects/:slug" element={<Project />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }

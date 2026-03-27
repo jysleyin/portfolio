@@ -214,11 +214,23 @@ export default function Home() {
       </div>
 
       {/* Footer Section */}
-      <section className="py-20 px-8" style={{backgroundColor: '#F7C5FC'}}>
-        <div className="max-w-4xl mx-auto">
-          
+      <footer className="py-16 px-8 text-center" style={{backgroundColor: '#F7C5FC'}}>
+        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
+          <div className="text-3xl md:text-4xl font-light">julissaliangg@gmail.com</div>
+          <a
+            href="mailto:julissaliangg@gmail.com"
+            className="inline-block bg-black text-white text-xl px-8 py-3 rounded-full shadow hover:bg-gray-800 transition font-normal"
+            style={{ textDecoration: 'none' }}
+          >
+            Contact
+          </a>
+          <div className="flex flex-col md:flex-row gap-8 mt-8 text-lg justify-center">
+            <a href="/#work" className="hover:underline">Work</a>
+            <a href="/about" className="hover:underline">About</a>
+            <a href="https://www.linkedin.com/in/julissaliang/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
+          </div>
         </div>
-      </section>
+      </footer>
     </>
   );
 }

@@ -133,6 +133,7 @@ export default function About() {
                 <li>Raise Me Scholarship Award</li>
                 <li>NYU CAS Scholarship Award</li>
                 <li>NYU IRHC Advocacy Award</li>
+                <li>NYU NRHH Empowering Program of the Month</li>
               </ul>
             </div>
 

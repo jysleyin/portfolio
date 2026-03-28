@@ -115,7 +115,7 @@ export default function About() {
                 <li><em>(2024 - Present)</em> Vice President, Girls Who Code @ NYU</li>
                 <li><em>(2023 - Present)</em> President, NYU Class Activities Board</li>
                 <li><em>(2023 - Present)</em> President's Council, NYU Student Government Assembly</li>
-                <li><em>(2023 - Present)</em> Marketing Director, NYU Asian Heritage Month</li>
+                <li><em>(2023 - 2025)</em> Marketing Director, NYU Asian Heritage Month</li>
                 <li><em>(2024 - 2025)</em> Alumni Advisory Council Board Member, Girls Who Code</li>
                 <li><em>(2024)</em> Mentee, Out in Tech Mentee</li>
               </ul>

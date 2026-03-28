@@ -48,7 +48,11 @@ export default function Project() {
 
             {/* image on top */}
             <div className="w-11/12 mx-auto mb-5">
-              {!(project.slug === 'benefitbridge' && index === 1) && (
+              {project.slug === 'benefitbridge' && index === 1 ? (
+                <div style={{ marginBottom: '3.5rem' }}>
+                  {/* Empty space for extra gap */}
+                </div>
+              ) : (
                 <img 
                   src={images[index]} 
                   alt={`${project.title} ${index+1}`} 

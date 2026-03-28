@@ -182,7 +182,9 @@ export default function Home() {
                   <div className="flex-1 flex flex-col">
                     <h3 className="text-white text-3xl font-bold mb-3">{project.title}</h3>
                     <p className="text-white text-lg mb-2"><em>({project.date})</em> {project.desc}</p>
-                    <p className="text-white text-sm mb-4">⏱ 5 min read</p>
+                    {project.slug !== 'enchanted-whispers' && (
+                      <p className="text-white text-sm mb-4">⏱ 5 min read</p>
+                    )}
                     <div className="flex-1"></div>
                     <div className="flex justify-end">
                       {project.slug === 'enchanted-whispers' ? (

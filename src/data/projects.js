@@ -73,7 +73,7 @@ As the front-end developer, I focused on transforming ideas from team brainstorm
       slides2,
       slides3
     ],
-    tags: ['healthcare', 'data', 'visualization'],
+    tags: ['figma', 'canva'],
     reflection: `As patient databases expand, Forever Health aims to revolutionize electronic medical records (EMR) by leveraging AI and web3/blockchain technology. This patient-centric platform is designed to alleviate the workload on healthcare providers while enhancing patient autonomy, ensuring both efficiency and robust data security.
 
 To explore innovative solutions, I began by researching real-world applications of web3 and blockchain in the medical industry. I also conducted interviews with a diverse range of stakeholders—including patients, nurses, front-desk staff, and technology experts—to gather valuable insights from multiple perspectives. These conversations helped me better understand the unique challenges and opportunities in healthcare data management, and informed the design of a platform that prioritizes both user experience and security.

@@ -48,13 +48,15 @@ export default function Project() {
 
             {/* image on top */}
             <div className="w-11/12 mx-auto mb-5">
-              <img 
-                src={images[index]} 
-                alt={`${project.title} ${index+1}`} 
-                className={`w-full object-contain rounded-xl cursor-pointer hover:opacity-80 transition-opacity ${index === 2 ? 'h-80 md:h-96' : 'h-56 md:h-72'}`}
-                style={{borderRadius: 20}}
-                onClick={() => setZoomed(true)}
-              />
+              {!(project.slug === 'benefitbridge' && index === 1) && (
+                <img 
+                  src={images[index]} 
+                  alt={`${project.title} ${index+1}`} 
+                  className="w-full object-contain rounded-xl cursor-pointer hover:opacity-80 transition-opacity h-56 md:h-72"
+                  style={{borderRadius: 20}}
+                  onClick={() => setZoomed(true)}
+                />
+              )}
             </div>
 
             {/* text below image */}

@@ -1,5 +1,7 @@
 import photo from '../assets/photo.png'
-import enchantedwhispers from '../assets/enchantedwhispers.png'
+import enchantedwhispersModel from '../assets/enchantedwhispers-model.png'
+import benefitbridgeModel from '../assets/benefitbridge-model.png'
+import foreverhealthModel from '../assets/foreverhealth-model.png'
 import { motion, useScroll } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -156,6 +158,10 @@ export default function Home() {
         <h2 className="text-4xl font-bold text-center mb-16">Featured Works</h2>
         <div className="max-w-5xl mx-auto pb-40 space-y-4">
           {projects.map((project, i) => {
+            let customImage = null;
+            if (i === 0) customImage = benefitbridgeModel;
+            if (i === 1) customImage = enchantedwhispersModel;
+            if (i === projects.length - 1) customImage = foreverhealthModel;
             return (
               <motion.div
                 key={i}
@@ -168,7 +174,7 @@ export default function Home() {
               >
                 <div className="p-10 flex flex-col md:flex-row gap-8 relative min-h-[375px]" style={{backgroundColor: project.color, borderRadius: '30px'}}>
                   <img 
-                    src={project.image || "https://via.placeholder.com/200x150"} 
+                    src={customImage || project.image || "https://via.placeholder.com/200x150"} 
                     alt={project.title}
                     className="w-64 h-48 object-cover"
                     style={{borderRadius: '20px'}}
@@ -179,24 +185,47 @@ export default function Home() {
                     <p className="text-white text-sm mb-4">⏱ 5 min read</p>
                     <div className="flex-1"></div>
                     <div className="flex justify-end">
-                      <motion.button
-                        className="inline-block px-8 py-3 text-lg rounded-full cursor-pointer"
-                        style={{backgroundColor: '#F5F1E8', color: 'black'}}
-                        onHoverStart={() => setHoveredProject(i)}
-                        onHoverEnd={() => setHoveredProject(null)}
-                        animate={{ paddingRight: hoveredProject === i ? '1.5rem' : '0.25rem' }}
-                        transition={{ duration: 0.2 }}
-                        onClick={() => navigate(`/projects/${project.slug}`)}
-                      >
-                        View more
-                        <motion.span
-                          className="ml-2"
-                          animate={{ opacity: hoveredProject === i ? 1 : 0 }}
+                      {project.slug === 'enchanted-whispers' ? (
+                        <motion.a
+                          href="https://enchantedwhispers.netlify.app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-8 py-3 text-lg rounded-full cursor-pointer"
+                          style={{backgroundColor: '#F5F1E8', color: 'black', textDecoration: 'none'}}
+                          onMouseEnter={() => setHoveredProject(i)}
+                          onMouseLeave={() => setHoveredProject(null)}
+                          animate={{ paddingRight: hoveredProject === i ? '1.5rem' : '0.25rem' }}
                           transition={{ duration: 0.2 }}
                         >
-                          →
-                        </motion.span>
-                      </motion.button>
+                          View more
+                          <motion.span
+                            className="ml-2"
+                            animate={{ opacity: hoveredProject === i ? 1 : 0 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            →
+                          </motion.span>
+                        </motion.a>
+                      ) : (
+                        <motion.button
+                          className="inline-block px-8 py-3 text-lg rounded-full cursor-pointer"
+                          style={{backgroundColor: '#F5F1E8', color: 'black'}}
+                          onHoverStart={() => setHoveredProject(i)}
+                          onHoverEnd={() => setHoveredProject(null)}
+                          animate={{ paddingRight: hoveredProject === i ? '1.5rem' : '0.25rem' }}
+                          transition={{ duration: 0.2 }}
+                          onClick={() => navigate(`/projects/${project.slug}`)}
+                        >
+                          View more
+                          <motion.span
+                            className="ml-2"
+                            animate={{ opacity: hoveredProject === i ? 1 : 0 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            →
+                          </motion.span>
+                        </motion.button>
+                      )}
                     </div>
                   </div>
                 </div>

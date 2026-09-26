@@ -1,4 +1,11 @@
 import aboutme from '../assets/about-me.png'
+import o4uLogo from '../assets/logos/O4U+site+logo+2.png'
+import girlsWhoCodeLogo from '../assets/logos/Girls_Who_Code_Logo_2020_-_Teal.png'
+import outInTechLogo from '../assets/logos/Out-in-Tech-core-logo.webp'
+import rewritingTheCodeLogo from '../assets/logos/Rewriting-the-Code-Logo.png'
+import lastMileLogo from '../assets/logos/Last+Mile+Rounded+White+Logo.webp'
+import liveGirlLogo from '../assets/logos/LG+-+Live+Girl+Logo+circle+green.webp'
+import nyuLogo from '../assets/logos/Nyu_short_color.svg.webp'
 
 // Import selected quest images for the carousel
 import quest2 from '../assets/quests/quest-2.jpg';
@@ -55,6 +62,56 @@ export default function About() {
             </div>
           </div>
 
+          {/* Organization Logo Loop */}
+          <div className="mb-12 -mx-8">
+            <div className="overflow-hidden">
+              <style>
+                {`
+                  @keyframes logo-scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(calc(-50% - 0.75rem)); }
+                  }
+                  .logo-scroll {
+                    animation: logo-scroll 70s linear infinite;
+                    display: flex;
+                    width: max-content;
+                    gap: 1.25rem;
+                    align-items: center;
+                  }
+                  .logo-scroll:hover {
+                    animation-play-state: paused;
+                  }
+                `}
+              </style>
+              <div className="logo-scroll px-8">
+                {[
+                  o4uLogo,
+                  girlsWhoCodeLogo,
+                  outInTechLogo,
+                  rewritingTheCodeLogo,
+                  lastMileLogo,
+                  liveGirlLogo,
+                  nyuLogo,
+                  o4uLogo,
+                  girlsWhoCodeLogo,
+                  outInTechLogo,
+                  rewritingTheCodeLogo,
+                  lastMileLogo,
+                  liveGirlLogo,
+                  nyuLogo
+                ].map((logo, i) => (
+                  <div key={i} className="flex h-16 items-center justify-center rounded-full bg-white/10 px-6 backdrop-blur-sm">
+                    <img
+                      src={logo}
+                      alt={`Organization logo ${i + 1}`}
+                      className="h-12 w-auto object-contain opacity-90"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Side Quests Section */}
           <div className="mb-16 -mx-8">
             <h2 className="text-4xl font-bold mb-8 px-8">Side Quests</h2>
@@ -71,12 +128,13 @@ export default function About() {
                   {`
                     @keyframes scroll {
                       0% { transform: translateX(0); }
-                      100% { transform: translateX(-100%); }
+                      100% { transform: translateX(calc(-50% - 0.5rem)); }
                     }
                     .animate-scroll {
-                      animation: scroll 120s linear infinite;
+                      animation: scroll 90s linear infinite;
                       display: flex;
                       width: max-content;
+                      gap: 1rem;
                     }
                     .animate-scroll:hover {
                       animation-play-state: paused;
@@ -110,13 +168,16 @@ export default function About() {
             <div>
               <h3 className="text-lg mb-4">Extracurriculars</h3>
               <ul className="space-y-2">
-                <li><em>(2025 - May 2026)</em> Public Relations, NYU Girls Proud to be First</li>
-                <li><em>(2024 - May 2026)</em> Resident Assistant, NYU Residence Life</li>
-                <li><em>(2024 - May 2026)</em> Vice President, Girls Who Code @ NYU</li>
-                <li><em>(2023 - May 2026)</em> President, NYU Class Activities Board</li>
-                <li><em>(2023 - May 2026)</em> President's Council, NYU Student Government Assembly</li>
-                <li><em>(2023 - 2025)</em> Marketing Director, NYU Asian Heritage Month</li>
-                <li><em>(2024 - 2025)</em> Alumni Advisory Council Board Member, Girls Who Code</li>
+                <li><em>(2026-2027)</em> Recruiting Chair, Cigna TECDP</li>
+                <li><em>(2026)</em> Recruitment Chair, Alpha Phi Omega</li>
+                <li><em>(2026)</em> Programming Director, Out 4 Undergrad</li>
+                <li><em>(2025-2026)</em> Public Relations, NYU Girls Proud to be First</li>
+                <li><em>(2024-2026)</em> Resident Assistant, NYU Residence Life</li>
+                <li><em>(2024-2026)</em> Vice President, Girls Who Code @ NYU</li>
+                <li><em>(2023-2026)</em> President, NYU Class Activities Board</li>
+                <li><em>(2023-2026)</em> President's Council, NYU Student Government Assembly</li>
+                <li><em>(2023-2025)</em> Marketing Director, NYU Asian Heritage Month</li>
+                <li><em>(2024-2025)</em> Alumni Advisory Council Board Member, Girls Who Code</li>
                 <li><em>(2024)</em> Mentee, Out in Tech Mentee</li>
               </ul>
             </div>

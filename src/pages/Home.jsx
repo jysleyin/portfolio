@@ -66,7 +66,7 @@ export default function Home() {
               {showCursor && <span className="typing-cursor">|</span>}
             </h1>
             <p className="text-gray-700 text-xl mb-8 max-w-md">
-              A student, creative builder, and community leader obsessed with turning ideas into impact.
+              A creative builder and community leader obsessed with turning ideas into impact.
             </p>
             <motion.a
               href="https://www.linkedin.com/in/julissa-liang-6958801b5/"

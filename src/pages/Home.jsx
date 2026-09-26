@@ -1,11 +1,18 @@
 import photo from '../assets/photo.png'
-import enchantedwhispersModel from '../assets/enchantedwhispers-model.png'
 import benefitbridgeModel from '../assets/benefitbridge-model.png'
-import foreverhealthModel from '../assets/foreverhealth-model.png'
+import thebutton from '../assets/thebutton.png'
 import { motion, useScroll } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import projects from '../data/projects'
+
+// projects highlighted on the home page, in display order
+const featuredSlugs = ['rxmatch', 'the-button', 'benefitbridge']
+const featuredImages = {
+  benefitbridge: benefitbridgeModel,
+  'the-button': thebutton,
+}
+const featuredProjects = featuredSlugs.map((slug) => projects.find((p) => p.slug === slug))
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
@@ -157,11 +164,8 @@ export default function Home() {
       <section id="work" ref={containerRef} className="py-8 px-8" style={{backgroundColor: '#e0eb73'}}>
         <h2 className="text-4xl font-bold text-center mb-16">Featured Works</h2>
         <div className="max-w-5xl mx-auto pb-40 space-y-4">
-          {projects.map((project, i) => {
-            let customImage = null;
-            if (i === 0) customImage = benefitbridgeModel;
-            if (i === 1) customImage = enchantedwhispersModel;
-            if (i === projects.length - 1) customImage = foreverhealthModel;
+          {featuredProjects.map((project, i) => {
+            const image = featuredImages[project.slug];
             return (
               <motion.div
                 key={i}
@@ -173,42 +177,34 @@ export default function Home() {
                 viewport={{ once: true, margin: "-100px" }}
               >
                 <div className="p-10 flex flex-col md:flex-row gap-8 relative min-h-[375px]" style={{backgroundColor: project.color, borderRadius: '30px'}}>
-                  <img 
-                    src={customImage || project.image || "https://via.placeholder.com/200x150"} 
-                    alt={project.title}
-                    className="w-64 h-48 object-cover"
-                    style={{borderRadius: '20px'}}
-                  />
+                  {image ? (
+                    <img
+                      src={image}
+                      alt={project.title}
+                      className="w-64 h-48 object-cover"
+                      style={{borderRadius: '20px'}}
+                    />
+                  ) : (
+                    <div
+                      className="flex w-64 h-48 shrink-0 items-center justify-center border border-dashed border-white/40 bg-white/10 text-sm text-white/70"
+                      style={{borderRadius: '20px'}}
+                    >
+                      TBD
+                    </div>
+                  )}
                   <div className="flex-1 flex flex-col">
                     <h3 className="text-white text-3xl font-bold mb-3">{project.title}</h3>
-                    <p className="text-white text-lg mb-2"><em>({project.date})</em> {project.desc}</p>
-                    {project.slug !== 'enchanted-whispers' && (
-                      <p className="text-white text-sm mb-4">⏱ 5 min read</p>
+                    {project.comingSoon ? (
+                      <p className="text-white text-lg mb-2">TBD</p>
+                    ) : (
+                      <>
+                        <p className="text-white text-lg mb-2"><em>({project.date})</em> {project.desc}</p>
+                        <p className="text-white text-sm mb-4">⏱ 5 min read</p>
+                      </>
                     )}
                     <div className="flex-1"></div>
+                    {!project.comingSoon && (
                     <div className="flex justify-end">
-                      {project.slug === 'enchanted-whispers' ? (
-                        <motion.a
-                          href="https://enchantedwhispers.netlify.app"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block px-8 py-3 text-lg rounded-full cursor-pointer"
-                          style={{backgroundColor: '#F5F1E8', color: 'black', textDecoration: 'none'}}
-                          onMouseEnter={() => setHoveredProject(i)}
-                          onMouseLeave={() => setHoveredProject(null)}
-                          animate={{ paddingRight: hoveredProject === i ? '1.5rem' : '0.25rem' }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          View more
-                          <motion.span
-                            className="ml-2"
-                            animate={{ opacity: hoveredProject === i ? 1 : 0 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            →
-                          </motion.span>
-                        </motion.a>
-                      ) : (
                         <motion.button
                           className="inline-block px-8 py-3 text-lg rounded-full cursor-pointer"
                           style={{backgroundColor: '#F5F1E8', color: 'black'}}
@@ -227,8 +223,8 @@ export default function Home() {
                             →
                           </motion.span>
                         </motion.button>
-                      )}
                     </div>
+                    )}
                   </div>
                 </div>
               </motion.div>

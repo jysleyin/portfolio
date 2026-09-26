@@ -15,7 +15,7 @@ export default function Navbar() {
           <img src={logo} alt="Logo" className="h-8" />
         </Link>
         <div className="flex items-center gap-8">
-          <a href="/#work" className="text-gray-400 hover:text-black transition">Work</a>
+          <Link to="/works" className="text-gray-400 hover:text-black transition">Work</Link>
           <Link to="/about" className="text-gray-400 hover:text-black transition">About</Link>
           <a
             href="mailto:julissaliangg@gmail.com"

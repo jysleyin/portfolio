@@ -1,7 +1,13 @@
+import thebuttonStage from '../assets/thebutton-1.jpg'
+import thebuttonAudience from '../assets/thebutton-2.jpg'
+import thebuttonContestants from '../assets/thebutton-3.jpg'
 import enchantedwhispers from '../assets/enchantedwhispers.png'
 import benefitbridge from '../assets/benefitbridge.png'
 import benefitbridge2 from '../assets/benefitbridge2.png'
 import benefitbridgeModel from '../assets/benefitbridge-model.png'
+import benefitbridgeSurvey from '../assets/benefitbridge-survey.png'
+import benefitbridgeWallet from '../assets/benefitbridge-wallet.png'
+import benefitbridgeCategory from '../assets/benefitbridge-category.png'
 import slides1 from '../assets/slides1.png'
 import slides2 from '../assets/slides2.png'
 import slides3 from '../assets/slides3.png'
@@ -35,6 +41,28 @@ As the front-end developer, I focused on transforming ideas from team brainstorm
       benefitbridge2,
     ],
     tags: ['react native', 'dynamoDB', 'fast api', 'azure ai'],
+    gallery: [],
+    // case study page
+    subtitle: 'A mobile app that matches people with benefit plans and vendors that fit their priorities.',
+    role: 'Frontend lead and Scrum Master',
+    team: '10 interns',
+    stack: 'React Native, FastAPI, Azure, DynamoDB',
+    problemLead: 'There are plenty of benefits out there, but people struggle to figure out which ones actually fit their needs.',
+    built: 'An app that learns what each person cares about, recommends matching plans and vendors, and lets them save favorites to come back to.',
+    features: [
+      { title: 'Personalized matching', body: 'Recommends plans based on each person’s preferences.', image: benefitbridgeSurvey },
+      { title: 'AI-powered virtual wallet', body: 'Save and revisit vendors, with data managed in DynamoDB.', image: benefitbridgeWallet },
+      { title: 'Comparative analytics', body: 'Pick a category and see the top contender benefit that best matches your needs.', image: benefitbridgeCategory },
+    ],
+    roles: [
+      { title: 'Frontend lead', body: 'Turned ideas from team brainstorms into designs in Figma, then built and refined them in React Native.' },
+      { title: 'Scrum Master', body: 'Ran weekly sprints for the team, with planning on Mondays and reviews on Fridays, and tracked every task’s progress, priority, and type on Kanban boards.' },
+    ],
+    learned: `Twelve weeks sounds like a lot of time, until you’re trying to take an idea all the way to something that’s actually live. At the start we had more ideas than we could ever build, and one of the hardest parts was deciding what we could really do well in the time we had.
+
+What stuck with me most was the gap between a design and a working app. A screen could look finished in Figma and still need a lot of work before it held up in React Native, on a real phone, connected to everything else the team was building. I started designing with that in mind, and it made me a better frontend developer.
+
+Getting BenefitBridge deployed wasn’t one big moment. It was a lot of small ones: checking in with each other, adjusting every sprint, and trusting everyone to finish their part. Seeing it go live at the end made all twelve weeks feel worth it.`,
   },
   {
     slug: 'enchanted-whispers',
@@ -74,6 +102,8 @@ As the front-end developer, I focused on transforming ideas from team brainstorm
       slides3
     ],
     tags: ['figma', 'canva'],
+    stack: 'Figma, Canva',
+    stackLabel: 'Tools',
     reflection: `As patient databases expand, Forever Health aims to revolutionize electronic medical records (EMR) by leveraging AI and web3/blockchain technology. This patient-centric platform is designed to alleviate the workload on healthcare providers while enhancing patient autonomy, ensuring both efficiency and robust data security.
 
 To explore innovative solutions, I began by researching real-world applications of web3 and blockchain in the medical industry. I also conducted interviews with a diverse range of stakeholders—including patients, nurses, front-desk staff, and technology experts—to gather valuable insights from multiple perspectives. These conversations helped me better understand the unique challenges and opportunities in healthcare data management, and informed the design of a platform that prioritizes both user experience and security.
@@ -86,6 +116,52 @@ To explore innovative solutions, I began by researching real-world applications 
         'The platform features account switching, AI assistants, medical records, and user info, all designed for simplicity and accessibility.',
         'Special attention is given to elderly users, with larger fonts and a voice assistant (“SIRI”-like) to make setup and navigation easier, ideally with help from medical specialists.'
       ],
+  },
+  {
+    slug: 'rxmatch',
+    title: 'RxMatch',
+    date: 'TBD',
+    desc: 'TBD',
+    problem: 'TBD',
+    solution: 'TBD',
+    goal: [],
+    color: '#000000',
+    images: [],
+    tags: [],
+    comingSoon: true,
+  },
+  {
+    slug: 'the-button',
+    title: 'The Button',
+    date: 'Spring 2026',
+    desc: 'What happens when you give strangers five minutes and a button? A remake of The Button, the live dating show inspired by The Cut, hosted by Class Activities Board. A real-time web app lets audience members send letters of appreciation to contestants and vote for their favorite matches, turning everyone watching into part of the show.',
+    problem: 'Student events are usually something you just show up to. We wanted to bring a new kind of connection to campus and rethink what a student event could look like, not just for the people on stage, but for everyone watching.',
+    solution: 'Class Activities Board hosted a remake of The Button, a live dating show inspired by The Cut. Marcus Rouquet and I built a web app so audience members could send letters of appreciation to contestants and vote for their favorite matches in real time.',
+    goal: [
+      'Bring a new kind of connection to campus',
+      'Make the audience part of the event, not just the people on stage',
+      'Let audience members send letters of appreciation and vote in real time',
+    ],
+    link: 'https://lnkd.in/eEAHt8vn',
+    linkLabel: 'Featured in Washington Square News',
+    color: '#EA6640',
+    images: [thebuttonAudience, thebuttonStage, thebuttonContestants],
+    tags: ['web app', 'live event'],
+    subtitle: 'A live dating show remake where the audience gets a say, powered by a real-time web app.',
+    stats: [
+      { value: '200+', label: 'Live audience members' },
+      { value: '300+', label: 'Viewers on Instagram Live' },
+      { value: 'NYU-wide', label: 'Broadcast to the entire student body' },
+    ],
+    featuresFilled: true,
+    built: 'We built a live web app so the audience could be part of the storyline, not just watch it. From their seats, everyone in the room could shape what happened on stage.',
+    features: [
+      { title: 'Live voting', icon: 'heart', body: 'Audience members voted for their favorite couples on stage, and the leaderboard updated live as the votes came in.' },
+      { title: 'Letters to contestants', icon: 'letter', body: 'Anyone could write a letter to the contestants. Each contestant got a unique code to open their own mailbox, and every letter opened with a little animation.' },
+      { title: 'Admin approval', icon: 'shield', body: 'An admin view let us pre-approve every letter before it was sent out to the contestants.' },
+    ],
+    gallery: [thebuttonStage, thebuttonContestants],
+    impact: 'The feedback was positive, and we think it’s because every person was involved. Not just the contestants on stage, but everyone voting and writing letters from their seats. It was a new way to bring engagement to campus, one that hadn’t been explored before.',
   },
 ];
 

@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Project from './pages/Project'
+import Works from './pages/Works'
+import CaseStudy from './pages/CaseStudy'
 
 
 export default function App() {
@@ -13,9 +15,11 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/works" element={<Works />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects/:slug" element={<Project />} />
+          <Route path="/case-study/out-in-tech" element={<CaseStudy />} />
         </Routes>
       </div>
     </Router>

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
   margin: 0;
@@ -11,7 +15,7 @@ html {
 }
 
 body {
-  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   margin: 0;
   padding: 0;
   overflow-x: hidden;

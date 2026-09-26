@@ -34,13 +34,13 @@ export default function About() {
               <h2 className="text-4xl font-bold mb-6">I'm Julz</h2>
               <div className="space-y-4 text-lg">
                 <p>
-                  a Computer Science major and Game Design minor at NYU, and a designer-technologist passionate about building intuitive, human-centered experiences.
+                  a recent graduate from NYU with a degree in Computer Science and a minor in Game Design, and a designer-technologist focused on building thoughtful, human-centered experiences.
                 </p>
                 <p>
-                  As a first-generation American and college graduate, I'm committed to using my skills to uplift others and pay it forward through every opportunity I pursue.
+                  As a first-generation college graduate, I’m committed to using my work to create meaningful impact, lift up others, and keep paying that momentum forward in every opportunity I take on.
                 </p>
                 <p>
-                  Outside of work, I love hosting events, caring for my cat, playing games, and enjoying a good smoothie.
+                  Outside of work, I still love hosting events, caring for my cat, playing games, and enjoying a good smoothie.
                 </p>
               </div>
             </div>
@@ -110,11 +110,11 @@ export default function About() {
             <div>
               <h3 className="text-lg mb-4">Extracurriculars</h3>
               <ul className="space-y-2">
-                <li><em>(2025 - Present)</em> Public Relations, NYU Girls Proud to be First</li>
-                <li><em>(2024 - Present)</em> Resident Assistant, NYU Residence Life</li>
-                <li><em>(2024 - Present)</em> Vice President, Girls Who Code @ NYU</li>
-                <li><em>(2023 - Present)</em> President, NYU Class Activities Board</li>
-                <li><em>(2023 - Present)</em> President's Council, NYU Student Government Assembly</li>
+                <li><em>(2025 - May 2026)</em> Public Relations, NYU Girls Proud to be First</li>
+                <li><em>(2024 - May 2026)</em> Resident Assistant, NYU Residence Life</li>
+                <li><em>(2024 - May 2026)</em> Vice President, Girls Who Code @ NYU</li>
+                <li><em>(2023 - May 2026)</em> President, NYU Class Activities Board</li>
+                <li><em>(2023 - May 2026)</em> President's Council, NYU Student Government Assembly</li>
                 <li><em>(2023 - 2025)</em> Marketing Director, NYU Asian Heritage Month</li>
                 <li><em>(2024 - 2025)</em> Alumni Advisory Council Board Member, Girls Who Code</li>
                 <li><em>(2024)</em> Mentee, Out in Tech Mentee</li>
@@ -125,10 +125,10 @@ export default function About() {
             <div>
               <h3 className="text-lg mb-4">Awards & Certifications</h3>
               <ul className="space-y-2">
+                <li>AWS Certified Cloud Practitioner</li>
                 <li>Microsoft Certified: Azure Fundamentals</li>
                 <li>AutoCAD Certified</li>
                 <li>Google Project Management: Professional Certificate</li>
-                <li>AWS Certified Cloud Practitioner</li>
                 <li>Last Mile Education Award</li>
                 <li>Raise Me Scholarship Award</li>
                 <li>NYU CAS Scholarship Award</li>

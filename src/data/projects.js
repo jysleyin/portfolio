@@ -139,7 +139,7 @@ To explore innovative solutions, I began by researching real-world applications 
     date: 'Spring 2026',
     desc: 'What happens when you give strangers five minutes and a button? A remake of The Button, the live dating show inspired by The Cut, hosted by Class Activities Board. A real-time web app lets audience members send letters of appreciation to contestants and vote for their favorite matches, turning everyone watching into part of the show.',
     problem: 'Student events are usually something you just show up to. We wanted to bring a new kind of connection to campus and rethink what a student event could look like, not just for the people on stage, but for everyone watching.',
-    solution: 'Class Activities Board hosted a remake of The Button, a live dating show inspired by The Cut. I organized the event and presented it as the main host, and Marcus Rouquet and I built a web app so audience members could send letters of appreciation to contestants and vote for their favorite matches in real time.',
+    solution: 'Class Activities Board hosted a remake of The Button, a live dating show inspired by The Cut. I organized the event and presented it as the main host, and built a web app so audience members could send letters of appreciation to contestants and vote for their favorite matches in real time.',
     role: 'Host, Event Organizer, and Developer',
     goal: [
       'Bring a new kind of connection to campus',
@@ -167,7 +167,7 @@ To explore innovative solutions, I began by researching real-world applications 
     roles: [
       { title: 'Host', body: 'Presented the show live on stage as the main host, guiding contestants and the audience through every round.' },
       { title: 'Event organizer', body: 'Organized the event with Class Activities Board, from planning the show to bringing it to life on the night.' },
-      { title: 'Developer', body: 'Brought my love for technology into the event by building the web app with Marcus Rouquet, so the audience could vote and send letters in real time.' },
+      { title: 'Developer', body: 'Brought my love for technology into the event by building the web app, so the audience could vote and send letters in real time.' },
     ],
     gallery: [thebuttonStage, thebuttonContestants],
     impact: 'The feedback was positive, and we think it’s because every person was involved. Not just the contestants on stage, but everyone voting and writing letters from their seats. It was a new way to bring engagement to campus, one that hadn’t been explored before.',

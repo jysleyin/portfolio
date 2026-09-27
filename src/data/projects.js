@@ -11,6 +11,9 @@ import benefitbridgeCategory from '../assets/benefitbridge-category.png'
 import slides1 from '../assets/slides1.png'
 import slides2 from '../assets/slides2.png'
 import slides3 from '../assets/slides3.png'
+import thebuttonVoting from '../assets/2.png'
+import thebuttonDashboard from '../assets/3.png'
+import thebuttonLetters from '../assets/4.png'
 
 const projects = [
   {
@@ -136,7 +139,8 @@ To explore innovative solutions, I began by researching real-world applications 
     date: 'Spring 2026',
     desc: 'What happens when you give strangers five minutes and a button? A remake of The Button, the live dating show inspired by The Cut, hosted by Class Activities Board. A real-time web app lets audience members send letters of appreciation to contestants and vote for their favorite matches, turning everyone watching into part of the show.',
     problem: 'Student events are usually something you just show up to. We wanted to bring a new kind of connection to campus and rethink what a student event could look like, not just for the people on stage, but for everyone watching.',
-    solution: 'Class Activities Board hosted a remake of The Button, a live dating show inspired by The Cut. Marcus Rouquet and I built a web app so audience members could send letters of appreciation to contestants and vote for their favorite matches in real time.',
+    solution: 'Class Activities Board hosted a remake of The Button, a live dating show inspired by The Cut. I organized the event and presented it as the main host, and Marcus Rouquet and I built a web app so audience members could send letters of appreciation to contestants and vote for their favorite matches in real time.',
+    role: 'Host, Event Organizer, and Developer',
     goal: [
       'Bring a new kind of connection to campus',
       'Make the audience part of the event, not just the people on stage',
@@ -156,9 +160,14 @@ To explore innovative solutions, I began by researching real-world applications 
     featuresFilled: true,
     built: 'We built a live web app so the audience could be part of the storyline, not just watch it. From their seats, everyone in the room could shape what happened on stage.',
     features: [
-      { title: 'Live voting', icon: 'heart', body: 'Audience members voted for their favorite couples on stage, and the leaderboard updated live as the votes came in.' },
-      { title: 'Letters to contestants', icon: 'letter', body: 'Anyone could write a letter to the contestants. Each contestant got a unique code to open their own mailbox, and every letter opened with a little animation.' },
-      { title: 'Admin approval', icon: 'shield', body: 'An admin view let us pre-approve every letter before it was sent out to the contestants.' },
+      { title: 'Live voting', image: thebuttonVoting, body: 'Audience members voted for their favorite couples on stage, and the leaderboard updated live as the votes came in.' },
+      { title: 'Letters to contestants', image: thebuttonLetters, body: 'Anyone could write a letter to the contestants. Each contestant got a unique code to open their own mailbox, and every letter opened with a little animation.' },
+      { title: 'Admin approval', image: thebuttonDashboard, body: 'An admin view let us pre-approve every letter before it was sent out to the contestants.' },
+    ],
+    roles: [
+      { title: 'Host', body: 'Presented the show live on stage as the main host, guiding contestants and the audience through every round.' },
+      { title: 'Event organizer', body: 'Organized the event with Class Activities Board, from planning the show to bringing it to life on the night.' },
+      { title: 'Developer', body: 'Brought my love for technology into the event by building the web app with Marcus Rouquet, so the audience could vote and send letters in real time.' },
     ],
     gallery: [thebuttonStage, thebuttonContestants],
     impact: 'The feedback was positive, and we think it’s because every person was involved. Not just the contestants on stage, but everyone voting and writing letters from their seats. It was a new way to bring engagement to campus, one that hadn’t been explored before.',
